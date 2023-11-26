@@ -13,7 +13,7 @@
     }
 
     #container {
-      display: cover;
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -21,7 +21,10 @@
       transition: background-color 0.5s ease-in-out;
     }
 
-    
+    #picture {
+      width: cover; /* Adjust the size as needed */
+      height: cover;
+      
     }
 
     h1 {
@@ -46,13 +49,13 @@
 </head>
 <body>
   <div id="container">
-    <img src="pic2.jpg,IMG-20230609-WA0028.jpg" alt="Picture">
-    <h1>Special Moments with My Love</h1>
+    <img id="picture" src="initial_picture.jpg" alt="Picture">
+    <h1>My Precious Debok and My Precious Princess Pendek</h1>
     <button onclick="changePicture()">Change Picture</button>
   </div>
 
   <script>
-    const pictures = ['pic2.jpg', 'IMG-20230609-WA0028.jpg', 'third_picture.jpg'];
+    const pictures = ['initial_picture.jpg', 'second_picture.jpg.jpg', 'third_picture.jpg'];
     let currentPictureIndex = 0;
 
     function changePicture() {
