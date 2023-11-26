@@ -55,12 +55,17 @@
   </div>
 
   <script>
+    const pictures = ['pic2.jpg', 'IMG-20230609-WA0028.jpg', 'third_picture.jpg'];
+    let currentPictureIndex = 0;
+
     function changePicture() {
       const picture = document.getElementById('picture');
-      const currentSource = picture.src;
 
-      // Change the image source based on the current source
-      picture.src = currentSource.includes('pic2.jpg') ? 'IMG-20230609-WA0028.jpg' ? 'IMG-20230525-WA0010.jpg' ? 'IMG-20230512-WA0040.jpg' 'initial_picture.jpg';
+      // Change the image source based on the current index
+      picture.src = pictures[currentPictureIndex];
+
+      // Increment the index or reset to 0 if it reaches the end
+      currentPictureIndex = (currentPictureIndex + 1) % pictures.length;
     }
   </script>
 </body>
